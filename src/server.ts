@@ -1,10 +1,12 @@
 import express from 'express';
 import { routes } from './Routes/routes';
-import "reflect-metadata"
+import { connectDB } from './db/connection/db';
 
 const server = express();
 
 const PORT = process.env.PORT || 5000;
+
+connectDB()
 
 server.use(express.json());
 

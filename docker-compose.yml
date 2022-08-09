@@ -1,14 +1,17 @@
 version: '3.9'
 services: 
     db:
-      image: mysql
-      container_name: mysql_db
+      image: postgres
+      container_name: pg_db
       ports:
-        - 3306:3306
+        - 5432:5432
+      restart: always
       environment:
-
+        POSTGRES_USER: test
+        POSTGRES_PASSWORD: test
+        POSTGRES_DB: test
       volumes:
-        - challenge4:/var/lib/mysql/data
+        - challenge4:/var/lib/mysql
 
 volumes:
   challenge4:
