@@ -33,7 +33,7 @@ class ExpenseRevenueMigration {
     
 }
 
-const migration = new ExpenseRevenueMigration('revenues');
+const migration = new ExpenseRevenueMigration('expenses');
 
 migration.createTable();
 // migration.dropTabel()
